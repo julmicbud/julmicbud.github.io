@@ -1,31 +1,383 @@
-<!DOCTYPE <!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-
-<head>
-	<title>Parks</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta name="description" content="Parks Map" />
-	  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-	<header>
-		<nav>
-		</nav>
-	</header>
-
-	<h1>Parks</h1>
-		<div id="map-canvas"></div>
-	<!-- content goes here -->
-
-	<footer>
-	</footer>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRroXcU-9TWHh3Z8EAquIBNCKrhLZYs7o">
-    </script>
-	<script type="text/javascript" src="js/app.js"></script>
-</body>
-
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>Caring Transitions Newsletter</title>
+		<style type="text/css">
+body{
+	bgcolor:#ffffff;
+	margin:0;
+	padding:0;
+	min-width:100%!important;
+	max-width:600px;
+	}
+					.first-table {
+	table-layout:fixed;
+	border-collapse:collapse; 
+	background:#ffffff; 
+	width: 100% !important; 
+	padding:0; 
+	margin:0; 
+	text-align:left;
+	}
+							.second-table {
+						width:100%;max-width:600px;
+						table-layout:fixed;
+						border-collapse:collapse;
+						background:#ffffff;
+						}
+																.third-table {
+										table-layout:fixed;
+										border-collapse:collapse;
+										background:#ffffff;
+										width:100%;
+										max-width:600px;
+										}
+.full-image {
+	display:block;
+	line-height:0;
+	width:100%;
+	max-width:600px;
+	height:auto;
+	}
+	.contact-info {
+	padding-top:25px;
+	padding-right:10px;
+	padding-bottom:10px;
+	padding-left:10px";
+	vertical-align:top;
+	}
+	.contact-info p {
+	text-align:center;
+	font-family:Berthold Akzidenz,Arial,Helvetica,sans-serif;
+	color:#686868;
+	font-size:13px;
+	line-height:21px;
+	margin:0;
+	padding:0;
+	}
+	.copyright {
+	text-align:left;
+	font-family:Berthold Akzidenz,Arial,Helvetica,sans-serif;
+	color:#686868;
+	font-size:13px;
+	line-height:21px;
+	}
+.two-column {
+			text-align: center;
+    	font-size: 0;
+		}	
+		.two-column .column {
+			width: 100%;
+    	max-width: 290px;
+    	display: inline-block;
+    	vertical-align: middle;
+		}
+.contents {
+width: 100%;
+}
+.two-column .contents {
+font-size: 14px;
+    text-align: left;
+}
+.two-column img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+}
+.two-column .text {
+    padding-top: 10px;
+}
+  .rightbar-column {
+	text-align:center;
+	font-size:0;
+	padding-top:10px"
+	}
+	.right-column1 {
+	width:60%;
+	max-width:330px;
+	display:inline-block;
+	vertical-align:top;
+	}
+	.right-contents {
+	font-size:14px;
+	text-align:left;
+	}
+	.right-contents h1 {
+	text-align:left!important;
+	font-family:ADOBE GARAMOND PRO regular,GEORGIA regular,serif;
+	color:#76616a;
+	font-size:36px;
+	line-height:32px;
+	margin:0;
+	padding:0;
+	}
+	.right-contents p {
+	text-align:left;
+	font-family:Berthold Akzidenz,Arial,Helvetica,sans-serif;
+	color:#686868;
+	font-size:13px;
+	line-height:21px;
+	margin:0;
+	padding-top:5px;
+	}
+	.right-column2 {
+	width:40%;
+	max-width:230px;
+	min-width:230px;
+	display:inline-block;
+	vertical-align:middle;
+	}
+	.right-contents-inside{
+	background:#ffffff;
+	padding:6px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#dadada;
+	}
+	.text2{
+	padding-top:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	vertical-align:middle;
+	background:#f1f1f1;
+	border-color:#c9c8c9;
+	border-width:1px;
+	border-style:solid;
+	}
+	.text2 img{
+	width:100%;
+	max-width:204px;
+	height:auto;
+	}
+	.text2 h1{
+	text-align:left!important;
+	font-family:ADOBE GARAMOND PRO regular,GEORGIA regular,serif;
+	color:#a10f45;
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:0px;
+	padding:0;
+	}
+	.text2 p {
+	text-align:left;
+	font-family:Berthold Akzidenz,Arial,Helvetica,sans-serif;
+	color:#686868;
+	font-size:13px;
+	line-height:21px;
+	margin:0;
+	padding:0;
+	}		</style>
+	</head>
+	<body bgcolor="#ffffff" style="margin:0;padding:0;min-width:100%!important;max-width:600px;">
+		<!--
+this should fix errors for outlook and lotus notes
+--><!--[if (gte mso 9)|(IE)]>
+	<table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td>
+			<![endif]-->
+		<table cellpadding="0" cellspacing="0" class="first-table" style="table-layout:fixed;border-collapse:collapse; background:#ffffff; width: 100% !important; padding:0; margin:0; text-align:left;" width="100%">
+			<tbody>
+				<tr>
+					<td>
+						<table>
+							<tbody>
+								<tr>
+									<td height="10px">
+										&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table align="center" cellpadding="0" cellspacing="0" class="second-table" style="width:100%;max-width:600px;table-layout:fixed;border-collapse:collapse;background:#ffffff;">
+							<tbody>
+								<tr>
+									<td height="3">
+										&nbsp;</td>
+								</tr>
+								<tr>
+									<td>
+										<table align="center" cellpadding="0" cellspacing="0" class="third-table" style="table-layout:fixed;border-collapse:collapse;background:#ffffff;width:100%;max-width:600px;">
+											<tbody>
+												<tr>
+													<td align="center" style="background:#ffffff;">
+														<img alt="Top Swoosh" class="full-image" src="https://chester2.franconnect.net/caringtransitionszcubator/servefile?fileName=/Documents/CK_EDITOR_IMAG/CM/Top_Swoosh_592252040115.jpg" style="display:block;line-height:0;width:100%;max-width:600px;height:auto;" /></td>
+												</tr>
+												<!--two column-->
+												<tr>
+													<td class="two-column" style="text-align:center;font-size:0;">
+														<!--[if (gte mso 9)|(IE)]>
+        <table width="100%">
+        <tr>
+        <td width="50%" valign="middle">
+        <![endif]-->
+														<div class="column" style="width:100%;max-width:290px;display:inline-block;vertical-align:middle;">
+															<table width="100%">
+																<tbody>
+																	<tr>
+																		<td class="inner">
+																			<table class="contents" style="width:100%;font-size:14px;text-align:left;">
+																				<tbody>
+																					<tr>
+																						<td>
+																							<img alt="Caring Transition Logo" height="137" src="https://chester2.franconnect.net/caringtransitionszcubator/servefile?fileName=/Documents/CK_EDITOR_IMAG/CM/CaringTransitions_Logo_Final1546616601.jpg" width="280" /></td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!--[if (gte mso 9)|(IE)]>
+        </td><td width="50%" valign="middle">
+        <![endif]-->
+														<div class="column" style="width:100%;max-width:290px;display:inline-block;vertical-align:middle;">
+															<table width="100%">
+																<tbody>
+																	<tr>
+																		<td class="inner">
+																			<table class="contents" style="width:100%;font-size:14px;text-align:center;">
+																				<tbody>
+																					<tr>
+																						<td class="text" style="padding-top:10px;valign:middle;">
+																							<h1 align="center" style="text-align:center!important;font-family:ADOBE GARAMOND PRO regular,GEORGIA regular,serif;color:#76616a;font-size:36px;line-height:32px;margin:0;padding:0">
+																								June Newsletter</h1>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]--></td>
+												</tr>
+												<!--end two column-->
+												<tr>
+													<td align="center" style="background:#ffffff;">
+														<img alt="main image" class="full-image" src="https://chester2.franconnect.net/caringtransitionszcubator/servefile?fileName=/Documents/CK_EDITOR_IMAG/CM/Main_image1409477449.jpg" style="display:block;line-height:0;display:block;line-height:0;width:100%;max-width:594px;height:auto;" /></td>
+												</tr>
+												<!--Right Column-->
+												<tr>
+													<td class="rightbar-column" style="text-align:center;font-size:0;padding-top:10px">
+														<!--[if (gte mso 9)|(IE)]>
+        <table width="100%">
+        <tr>
+        <td width="60%" valign="top">
+        <![endif]-->
+														<div class="right-column1" style="width:100%;max-width:330px;display:inline-block;vertical-align:top;">
+															<table width="330px">
+																<tbody>
+																	<tr>
+																		<td class="right-inner">
+																			<table class="right-contents" style="font-size:14px;text-align:left;">
+																				<tbody>
+																					<tr>
+																						<td>
+																							<h1 align="center" style="text-align:left!important;font-family:ADOBE GARAMOND PRO regular,GEORGIA regular,serif;color:#76616a;font-size:36px;line-height:32px;margin:0;padding:0">
+																								Proin sit amet</h1>
+																							<p align="left" style="text-align:left;font-family:Berthold Akzidenz,Arial,Helvetica,sans-serif;color:#686868;font-size:13px;line-height:21px;margin:0;padding-top:5px;">
+																								Fusce consectetur pretium ipsum, non vulputate augue euismod ut. Praesent a ipsum turpis. Duis sit amet mauris interdum nibh adipiscing aliquam id id urna. Morbi suscipit nulla auctor diam accumsan dictum. Nunc eleifend accumsan nisl in dictum. Aenean erat neque, cursus sit amet tincidunt vel, vestibulum vitae nunc. Proin sit amet nibh at est congue accumsan. Suspendisse quis enim at mi commodo suscipit nec id eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit feugiat elit, ac aliquam ligula pharetra eget. Vestibulum eu tincidunt turpis. Mauris lobortis ex orci, quis dictum orci sollicitudin in. Morbi nulla nisl, rutrum vitae accumsan ac, dapibus condimentum ex. Vestibulum nec nisl vitae ligula sodales dignissim. Duis et faucibus justo. Aenean et suscipit dui. In fermentum sit amet ipsum et porttitor. Praesent molestie consequat molestie. Quisque sit amet diam sollicitudin, convallis tortor eu, ultrices mi. Suspendisse ut nibh eros. Vivamus venenatis vehicula metus, ornare imperdiet nunc hendrerit dapibus. Nunc varius rhoncus metus, et convallis nulla faucibus a. Sed placerat feugiat magna, vel feugiat nunc aliquam quis. Nullam eu justo nibh. Nam pulvinar cursus tellus non porttitor. Morbi efficitur ex eget urna aliquam tempus. Fusce lacinia nibh vitae finibus consectetur. In commodo nisl id nisi blandit tincidunt nec quis lacus. Vestibulum eu tellus aliquam, finibus eros nec, semper leo. Morbi eros lectus, sagittis id ultrices id, consectetur eget enim. Donec maximus ante et quam dapibus, sed suscipit mauris hendrerit.</p>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!--[if (gte mso 9)|(IE)]>
+        </td><td width="40%" valign="top">
+        <![endif]-->
+														<div class="right-column2" style="width:100%;max-width:230px;min-width:230px;display:inline-block;vertical-align:middle;">
+															<table width="230px">
+																<tbody>
+																	<tr>
+																		<td class="right-inner">
+																			<table class="right-contents" style="font-size:14px;text-align:left;">
+																				<tbody>
+																					<tr>
+																						<td class="right-contents-inside" style="background:#ffffff;padding:6px;border-style:solid;border-width:1px;border-color:#dadada;">
+																							<table>
+																								<tbody>
+																									<tr>
+																										<td class="text2" style="padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;valign:middle;background:#f1f1f1;border-color:#c9c8c9;border-width:1px;border-style:solid;">
+																											<img alt="right bar image" src="https://chester2.franconnect.net/caringtransitionszcubator/servefile?fileName=/Documents/CK_EDITOR_IMAG/CM/rightbar_image758294934.jpg" style="max-width: 204px;" width="204" />
+																											<h1 style="text-align:left!important;font-family:ADOBE GARAMOND PRO regular,GEORGIA regular,serif;color:#a10f45;font-size:20px;font-weight:bold;margin-bottom:0px;padding:0">
+																												Proin sit amet</h1>
+																											<p align="left" style="text-align:left;font-family:Berthold Akzidenz,Arial,Helvetica,sans-serif;color:#686868;font-size:13px;line-height:21px;margin:0;padding:0;">
+																												Quisque sit amet diam sollicitudin, convallis tortor eu, ultrices mi. Sed placerat feugiat magna, vel feugiat nunc aliquam quis. Nullam eu justo nibh. Nam pulvinar cursus tellus non porttitor. Morbi efficitur ex eget urna aliquam tempus. Fusce lacinia nibh vitae finibus consectetur. In commodo nisl id nisi blandit tincidunt nec quis lacus. Vestibulum eu tellus aliquam, finibus eros nec, semper leo. Morbi eros lectus, sagittis id ultrices id, consectetur eget enim. Donec maximus ante et quam dapibus, sed suscipit mauris hendrerit.</p>
+																										</td>
+																									</tr>
+																								</tbody>
+																							</table>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]--></td>
+												</tr>
+												<!--end right bar-->
+												<tr>
+													<td class="contact-info" style="padding-top:25px;padding-right:10px;padding-bottom:10px;padding-left:10px" valign="top">
+														<p align="center" style="text-align:center;font-family:Berthold Akzidenz,Arial,Helvetica,sans-serif;color:#686868;font-size:13px;line-height:21px;margin:0;padding:0">
+															Contact Caring Transitions $OWNERS_CENTER_NAME$ for a Consultation<br />
+															$CENTER_PHONE$<br />
+															For more information, visit us online or email us at $CENTER_EMAIL$</p>
+													</td>
+												</tr>
+												<tr>
+													<td align="center" style="background:#ffffff;">
+														<img alt="Bottom Swoosh" class="full-image" src="https://chester2.franconnect.net/caringtransitionszcubator/servefile?fileName=/Documents/CK_EDITOR_IMAG/CM/Bottom_swoosh_592360829039.jpg" style="display:block;line-height:0;width:100%;max-width:594px;height:auto;" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="3px">
+										&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						<table align="center" cellpadding="0" cellspacing="0" style="table-layout:fixed;">
+							<tbody>
+								<tr>
+									<td height="10px">
+										&nbsp;</td>
+								</tr>
+								<tr>
+									<td style="width:100%;max-width:600px;">
+										<p class="copyright" style="text-align:left;font-family:Berthold Akzidenz,Arial,Helvetica,sans-serif;color:#686868;font-size:13px;line-height:21px;">
+											Copyright &copy; 2016 Caring Transitions All Rights Reserved.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--[if (gte mso 9)|(IE)]>
+	</td>
+	</tr>
+	</table>
+	<![endif]--></body>
 </html>
